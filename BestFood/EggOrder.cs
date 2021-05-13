@@ -36,8 +36,8 @@ namespace BestFood
         }
         public void Crack()
         {
-            if (quality < 25)
-                throw new Exception($"Качество: {quality}, яйцо испорчено!");
+            if (GetQuality() < 25)
+                throw new Exception($"Качество: {GetQuality()}, яйцо испорчено!");
         }
         public void DiscardShell()
         {
