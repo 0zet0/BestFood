@@ -95,13 +95,13 @@ namespace BestFood
             }
 
         }
-        public string Inspect(Object o)
+        public string Inspect(Object zakaz)
         {
-            if (o is ChickenOrder)
+            if (zakaz is ChickenOrder)
                 return "";
             else
             {
-                EggOrder egg = (EggOrder)o;
+                EggOrder egg = (EggOrder)zakaz;
                 return "" + egg.GetQuality();
             }
         }
