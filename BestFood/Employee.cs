@@ -8,7 +8,7 @@ namespace BestFood
     class Employee
     {
         public Employee() { }
-        public Object zakaz;
+        private Object zakaz;
         private int orderCounter = 1;
         private bool checkBtnPrepare = false, checkOrder = false;
         public Object NewRequest(int quantity, string item)
@@ -61,9 +61,8 @@ namespace BestFood
             }
             else return "";
         }
-        public string PreparedFood(object zakaz)
+        public string PreparedFood()
         {
-
             if (!checkOrder)
                 throw new Exception("Заказов еще не было!");
             if (!checkBtnPrepare)
