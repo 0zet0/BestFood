@@ -19,16 +19,12 @@ namespace BestFood
         Employee employee = new Employee();
         private void button1_Click(object sender, EventArgs e)
         {
-            string item;
+            string item = (radioButton1.Checked) ? "chicken" : "egg";
             int quantity;
             textBox2.Text = "";
             try
             {
                 quantity = Convert.ToInt32(textBox1.Text);
-                if (radioButton1.Checked)
-                    item = "chicken";
-                else
-                    item = "egg";
                 label2.Text = "Egg Quality: " + employee.Incpect(employee.NewRequest(quantity, item));
             }
             catch (Exception ex)
