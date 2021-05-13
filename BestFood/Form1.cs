@@ -53,7 +53,7 @@ namespace BestFood
             textBox2.Text = "";
             try
             {
-                textBox2.Text = employee.PreparedFood(employee.zakaz);
+                textBox2.Text = employee.PreparedFood();
             }
             catch (Exception ex)
             {
